@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+</head>
+
+<body>
+<header>
+    <nav id="desktop-navigation">
+        <ul class="one_nesting_ul">
+            <li class="one_nesting_li"><a href="#" class="link">Item 1</a></li>
+            <li class="one_nesting_li">
+                <a href="#" class="link">Item 2</a>
+                <ul class="two_nesting_ul">
+                    <li class="two_nesting_li"><a href="#" class="link">Sub item 1</a></li>
+                    <li class="two_nesting_li">
+                        <a href="#" class="link">Sub item 2</a>
+                        <ul class="three_nesting_ul">
+                            <li class="three_nesting_li"><a href="#" class="link">Sub sub item 1</a></li>
+                            <li class="three_nesting_li"><a href="#" class="link">Sub sub item 2</a></li>
+                            <li class="three_nesting_li"><a href="#" class="link">Sub sub item 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="two_nesting_li"><a href="#" class="link">Sub item 3</a></li>
+                </ul>
+            </li>
+            <li class="one_nesting_li"><a href="#" class="link">Item 3</a></li>
+            <li class="one_nesting_li">
+                <a href="#" class="link">Item 4</a>
+                <ul class="two_nesting_ul">
+                    <li class="two_nesting_li"><a href="#" class="link">Sub item 1</a></li>
+                    <li class="two_nesting_li"><a href="#" class="link">Sub item 2</a></li>
+                    <li class="two_nesting_li"><a href="#" class="link">Sub item 3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <nav id="mobile-navigation">
+        <div id="burger-menu" class="burger-menu js-burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="one_nesting_ul" id="pidor">
+            <li class="one_nesting_li"><a href="#" class="link">Item 1</a></li>
+            <li class="one_nesting_li">
+                <a href="#" class="link">Item 2</a>
+                <ul class="two_nesting_ul">
+                    <li class="two_nesting_li"><a href="#" class="link">Sub item 1</a></li>
+                    <li class="two_nesting_li">
+                        <a href="#" class="link">Sub item 2</a>
+                        <ul class="three_nesting_ul">
+                            <li class="three_nesting_li"><a href="#" class="link">Sub sub item 1</a></li>
+                            <li class="three_nesting_li"><a href="#" class="link">Sub sub item 2</a></li>
+                            <li class="three_nesting_li"><a href="#" class="link">Sub sub item 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="two_nesting_li"><a href="#" class="link">Sub item 3</a></li>
+                </ul>
+            </li>
+            <li class="one_nesting_li"><a href="#" class="link">Item 3</a></li>
+            <li class="one_nesting_li">
+                <a href="#" class="link">Item 4</a>
+                <ul class="two_nesting_ul">
+                    <li class="two_nesting_li"><a href="#" class="link">Sub item 1</a></li>
+                    <li class="two_nesting_li"><a href="#" class="link">Sub item 2</a></li>
+                    <li class="two_nesting_li"><a href="#" class="link">Sub item 3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<script src="script.js"></script>
+</body>
+
+</html>
