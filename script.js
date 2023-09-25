@@ -1,43 +1,50 @@
-function toggleNavigation() {
-    const desktopNavigationElement = $('#desktop-navigation');
-    const mobileNavigationElement = $('#mobile-navigation');
-    const tabletWidth = 768;
-    var screenWidth = $(window).width();
+$(function () {
+    var tabletWidth = 768;
+    var burgerMenuElement = $('#burger-menu');
+    var desktopNavigationElement = $('#desktop-navigation');
+    var mobileNavigationElement = $('#mobile-navigation');
+    var mobileUlElement = $('#mobile-ul');
 
-    if (screenWidth <= tabletWidth) {
+    function toggleNavigation() {
+        var screenWidth = $(window).width();
+        if (screenWidth <= tabletWidth) {
+            initMobileNavigation();
+        } else {
+            initDesktopNavigation();
+        }
+    }
+
+    function initNavigation() {
+        toggleNavigation();
+        initBurger();
+        $(window).on('resize', toggleNavigation);
+    }
+
+    function initBurger() {
+        burgerMenuElement.on('click', function () {
+            burgerMenuElement.toggleClass('open');
+            var slideDuration = 800;
+            if (burgerMenuElement.hasClass('open')) {
+                mobileUlElement.slideDown(slideDuration);
+            } else {
+                mobileUlElement.slideUp(slideDuration);
+            }
+        });
+    }
+
+    function initMobileNavigation() {
         desktopNavigationElement.hide();
         mobileNavigationElement.show();
-    } else {
+        mobileUlElement.hide();
+        if (burgerMenuElement.hasClass('open')) {
+            burgerMenuElement.removeClass('open');
+        }
+    }
+
+    function initDesktopNavigation() {
         desktopNavigationElement.show();
         mobileNavigationElement.hide();
     }
-}
 
-$(function () {
     initNavigation();
 });
-
-
-function initNavigation() {
-    toggleNavigation();
-    $(window).on('resize', function () {
-        toggleNavigation();
-    });
-    initBurger();
-}
-
-function initBurger() {
-    $('.js-burger-menu').on('click', function () {
-        toggleBurger($('.js-burger-menu'));
-    });
-}
-
-function toggleBurger(burgerElement) {
-    burgerElement.toggleClass('open');
-    if (burgerElement.hasClass('open')) {
-        $('#pidor').slideDown(800);
-    } else {
-        $('#pidor').slideUp(800);
-    }
-
-}
