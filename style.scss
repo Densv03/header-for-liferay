@@ -19,11 +19,10 @@ header {
   padding: 0 8%;
   box-shadow: 0 3px 7px rgba(0, 0, 0, .5);
 
-  nav {
+  #desktop-navigation {
     ul li {
       position: relative;
       float: left;
-      width: 200px;
     }
 
     ul li a {
@@ -59,12 +58,41 @@ header {
     ul li:hover > ul {
       display: initial;
     }
+  } 
+  
+  #mobile-navigation {
+
+    ul li {
+      border: 1px solid rgba(0, 0, 0, .1);
+      // width: 100px;
+    }
+
+    ul li a {
+      color: black;
+      font-size: 18px;
+      display: block;
+    }
+
+    ul li a:hover {
+      background: black;
+      color: #fff;
+    }
+
+    ul li ul {
+      background: #fff;
+    }
+
+    ul li ul li {
+      border: 1px solid rgba(0, 0, 0, .1);
+    }
   }
+
+
 }
 
 @media screen and (max-width: 952px) {
   header {
-    nav {
+    #desktop-navigation {
       ul li {
         width: 160px;
       }
@@ -79,6 +107,7 @@ header {
     }
   }
 }
+
 
 // burger button
 .burger-menu {
@@ -151,4 +180,13 @@ header {
       }
     }
   }
+}
+
+#mobile-ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.nested-ul {
+  display: none;
 }
