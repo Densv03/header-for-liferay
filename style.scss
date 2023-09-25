@@ -19,11 +19,10 @@ header {
   padding: 0 8%;
   box-shadow: 0 3px 7px rgba(0, 0, 0, .5);
 
-  nav {
+  #desktop-navigation {
     ul li {
       position: relative;
       float: left;
-      width: 200px;
     }
 
     ul li a {
@@ -133,4 +132,13 @@ header {
       }
     }
   }
+}
+
+#mobile-ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.nested-ul {
+  display: none;
 }

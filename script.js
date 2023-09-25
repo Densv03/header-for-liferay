@@ -8,9 +8,9 @@ $(function () {
     function toggleNavigation() {
         var screenWidth = $(window).width();
         if (screenWidth <= tabletWidth) {
-            initMobileNavigation();
+            initMobileNavigationVisibility();
         } else {
-            initDesktopNavigation();
+            initDesktopNavigationVisibility();
         }
     }
 
@@ -32,19 +32,33 @@ $(function () {
         });
     }
 
-    function initMobileNavigation() {
+    function initMobileNavigationVisibility() {
         desktopNavigationElement.hide();
         mobileNavigationElement.show();
         mobileUlElement.hide();
         if (burgerMenuElement.hasClass('open')) {
             burgerMenuElement.removeClass('open');
         }
+
+        initMobileNavigation();
     }
 
-    function initDesktopNavigation() {
+    function initDesktopNavigationVisibility() {
         desktopNavigationElement.show();
         mobileNavigationElement.hide();
     }
 
     initNavigation();
+
+    function initMobileNavigation() {
+        $('.one_nesting_li a').on('click', function(e) {
+            e.stopPropagation();
+            $(this).siblings('.two_nesting_ul').slideToggle();
+        });
+
+        $('.two_nesting_li a.toggle-nested').on('click', function(e) {
+            e.stopPropagation();
+            $(this).siblings('.three_nesting_ul').slideToggle();
+        });
+    }
 });

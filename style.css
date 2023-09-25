@@ -20,40 +20,39 @@ header {
   padding: 0 8%;
   box-shadow: 0 3px 7px rgba(0, 0, 0, 0.5); }
   /* line 23, style.scss */
-  header nav ul li {
+  header #desktop-navigation ul li {
     position: relative;
-    float: left;
-    width: 200px; }
-  /* line 29, style.scss */
-  header nav ul li a {
+    float: left; }
+  /* line 28, style.scss */
+  header #desktop-navigation ul li a {
     padding: 15px;
     color: black;
     font-size: 16px;
     display: block; }
-  /* line 36, style.scss */
-  header nav ul li a:hover {
+  /* line 35, style.scss */
+  header #desktop-navigation ul li a:hover {
     background: black;
     color: #fff; }
-  /* line 41, style.scss */
-  header nav ul li ul {
+  /* line 40, style.scss */
+  header #desktop-navigation ul li ul {
     position: absolute;
     left: 0;
     width: 180px;
     background: #fff;
     display: none; }
-  /* line 49, style.scss */
-  header nav ul li ul li {
+  /* line 48, style.scss */
+  header #desktop-navigation ul li ul li {
     width: 100%;
     border: 1px solid rgba(0, 0, 0, 0.1); }
-  /* line 54, style.scss */
-  header nav ul li ul li ul {
+  /* line 53, style.scss */
+  header #desktop-navigation ul li ul li ul {
     left: 180px;
     top: 0; }
-  /* line 59, style.scss */
-  header nav ul li:hover > ul {
+  /* line 58, style.scss */
+  header #desktop-navigation ul li:hover > ul {
     display: initial; }
 
-/* line 66, style.scss */
+/* line 65, style.scss */
 .burger-menu {
   width: 60px;
   height: 45px;
@@ -68,7 +67,7 @@ header {
   -o-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   cursor: pointer; }
-  /* line 81, style.scss */
+  /* line 80, style.scss */
   .burger-menu span {
     display: block;
     position: absolute;
@@ -86,30 +85,39 @@ header {
     -moz-transition: .25s ease-in-out;
     -o-transition: .25s ease-in-out;
     transition: .25s ease-in-out; }
-    /* line 99, style.scss */
+    /* line 98, style.scss */
     .burger-menu span:nth-child(1) {
       top: 0; }
-    /* line 103, style.scss */
+    /* line 102, style.scss */
     .burger-menu span:nth-child(2) {
       top: 18px; }
-    /* line 107, style.scss */
+    /* line 106, style.scss */
     .burger-menu span:nth-child(3) {
       top: 36px; }
-  /* line 114, style.scss */
+  /* line 113, style.scss */
   .burger-menu.open span:nth-child(1) {
     top: 18px;
     -webkit-transform: rotate(135deg);
     -moz-transform: rotate(135deg);
     -o-transform: rotate(135deg);
     transform: rotate(135deg); }
-  /* line 122, style.scss */
+  /* line 121, style.scss */
   .burger-menu.open span:nth-child(2) {
     opacity: 0;
     left: -60px; }
-  /* line 127, style.scss */
+  /* line 126, style.scss */
   .burger-menu.open span:nth-child(3) {
     top: 18px;
     -webkit-transform: rotate(-135deg);
     -moz-transform: rotate(-135deg);
     -o-transform: rotate(-135deg);
     transform: rotate(-135deg); }
+
+/* line 137, style.scss */
+#mobile-ul {
+  display: flex;
+  flex-direction: column; }
+
+/* line 142, style.scss */
+.nested-ul {
+  display: none; }
