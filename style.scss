@@ -62,6 +62,24 @@ header {
   }
 }
 
+@media screen and (max-width: 952px) {
+  header {
+    nav {
+      ul li {
+        width: 160px;
+      }
+
+      ul li ul {
+        width: 140px;
+      }
+
+      ul li ul li ul {
+        left: 140px;
+      }
+    }
+  }
+}
+
 // burger button
 .burger-menu {
   width: 60px;
