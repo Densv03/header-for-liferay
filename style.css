@@ -53,22 +53,23 @@ header {
     display: initial; }
   /* line 65, style.scss */
   header #mobile-navigation ul li {
-    border: 1px solid rgba(0, 0, 0, 0.1); }
-  /* line 70, style.scss */
+    margin-top: 3px; }
+  /* line 69, style.scss */
   header #mobile-navigation ul li a {
     color: black;
     font-size: 18px;
     display: block; }
-  /* line 76, style.scss */
+  /* line 75, style.scss */
   header #mobile-navigation ul li a:hover {
     background: black;
     color: #fff; }
-  /* line 81, style.scss */
+  /* line 80, style.scss */
   header #mobile-navigation ul li ul {
     background: #fff; }
-  /* line 85, style.scss */
+  /* line 84, style.scss */
   header #mobile-navigation ul li ul li {
-    border: 1px solid rgba(0, 0, 0, 0.1); }
+    margin-top: 5px;
+    margin-left: 3px; }
 
 @media screen and (max-width: 952px) {
   /* line 96, style.scss */

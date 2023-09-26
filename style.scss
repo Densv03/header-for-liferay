@@ -62,9 +62,8 @@ header {
   
   #mobile-navigation {
 
-    ul li {
-      border: 1px solid rgba(0, 0, 0, .1);
-      // width: 100px;
+    ul li  {
+      margin-top: 3px;
     }
 
     ul li a {
@@ -83,7 +82,8 @@ header {
     }
 
     ul li ul li {
-      border: 1px solid rgba(0, 0, 0, .1);
+      margin-top: 5px;
+      margin-left: 3px;
     }
   }
 
